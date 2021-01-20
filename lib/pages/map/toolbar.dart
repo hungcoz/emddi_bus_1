@@ -46,9 +46,10 @@ class _ToolbarState extends State<Toolbar> {
               contentPadding: EdgeInsets.only(left: 15, top: 15),
               suffixIcon: Icon(Icons.search),
             ),
-            suggestions: listBusStop,
+            suggestions: busStop,
             itemSubmitted: (item) =>
-                animateLocation(item.latitude, item.longitude, 16),
+                //animateLocation(item.latitude, item.longitude, 16),
+                print('object'),
             key: GlobalKey<AutoCompleteTextFieldState<BusStop>>(),
             itemBuilder: (context, busStop) => Padding(
               child: ListTile(
@@ -105,7 +106,7 @@ class _ToolbarState extends State<Toolbar> {
           FloatingActionButton(
             heroTag: null,
             onPressed: () {
-              animateLocation(lat, long, 17);
+              //animateLocation(lat, long, 17);
             },
             child: Icon(Icons.my_location),
             backgroundColor: Colors.white70,
